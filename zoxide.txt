@@ -1,0 +1,3 @@
+通过一行命令将 zoxide 初始化命令追加到 ~/.zshrc 中:
+echo 'eval "$(zoxide init zsh --cmd cd)"' >> ~/.zshrc
+

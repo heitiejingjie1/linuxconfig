@@ -1,0 +1,7 @@
+1.在 .zshrc 中设置 bat 配置文件位置环境变量。
+export BAT_CONFIG_PATH="${XDG_CONFIG_HOME:-~/.config}/bat.conf"
+
+2.生效后，执行如下命令将会生成配置文件：
+bat --generate-config-file
+
+3.配置 bat 默认选项，将主题配置 --theme=TwoDark 启用
