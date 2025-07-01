@@ -41,6 +41,8 @@
 `zz` - 将当前行移动到屏幕中央<br>
 `zt` - 将当前行移动到屏幕顶部<br>
 `zb` - 将当前行移动到屏幕底部<br>
+`ctrl + f` - 向下翻页<br>
+`ctrl + b` - 向上翻页<br>
 
 # 文件搜索
 ## 文件内搜索
@@ -79,6 +81,10 @@
 `diw` - 删除当前单词<br>
 `dit` - 删除当前table<br>
 `ciw` - 删除当前单词并进入 insert 模式<br>
+## 替换
+`r + 字符` - 替换光标所在位置的字符<br>
+`R` - 进入替换模式，替换光标所在位置的字符<br>
+`~` - 切换大小写（在 normal 模式下）<br>
 
 
 # 页签
@@ -105,18 +111,18 @@
 # window buffer tab 
 - window负责资料的展示
 - buffer负责资料的存储
-    vim 中的 buffer 是一个内存中的文件，打开的文件会被加载到 buffer 中。<br>
-    buffer 可以在不同的 window 中显示同一个文件，也可以在不同的 tab 中显示同一个文件。<br>
-    `:ls` - 列出所有 buffer<br>
-    `:b + buffer编号` - 切换到指定的 buffer<br>
-    `:bd` - 删除当前 buffer<br>
-    `ctrl + ^` - 切换到上一个buffer<br>
-    `:bn` - 切换到下一个 buffer<br>
-    `:bp` - 切换到上一个 buffer<br>
-    `:bdelete + buffer编号` - 删除指定的 buffer<br>
-    `:bwipeout + buffer编号` - 强制删除指定的 buffer<br>
-    `:bfirst` - 切换到第一个 buffer<br>
-    `:blast` - 切换到最后一个 buffer<br>
+    + vim 中的 buffer 是一个内存中的文件，打开的文件会被加载到 buffer 中。<br>
+    + buffer 可以在不同的 window 中显示同一个文件，也可以在不同的 tab 中显示同一个文件。<br>
+    + `:ls` - 列出所有 buffer<br>
+    + `:b + buffer编号` - 切换到指定的 buffer<br>
+    + `:bd` - 删除当前 buffer<br>
+    + `ctrl + ^` - 切换到上一个buffer<br>
+    + `:bn` - 切换到下一个 buffer<br>
+    + `:bp` - 切换到上一个 buffer<br>
+    + `:bdelete + buffer编号` - 删除指定的 buffer<br>
+    + `:bwipeout + buffer编号` - 强制删除指定的 buffer<br>
+    + `:bfirst` - 切换到第一个 buffer<br>
+    + `:blast` - 切换到最后一个 buffer<br>
 - tab负责资料的组织
 
 # vim text objects
@@ -129,6 +135,7 @@
     - c = class - 类
     - } = block - 代码块
     - b = block - 包含括号的内容
+    - ......
 - 动词
     - d = delete - 删除
     - c = change - 改变
@@ -147,3 +154,16 @@
 - `ciw` - 删除当前单词并进入 insert 模式
 - `yiw` - 复制当前单词
 - `viw` - 选择当前单词
+
+# 其他
+- notmal模式下
+    - `zfip` - 折叠当前段落
+    - `zo` - 展开当前折叠
+    - `.` - 重复上一个命令
+    - `J` - 合并当前行和下一行
+- insert模式下
+    - `ctrl + o` - 执行一个 normal 模式命令
+    - `ctrl + h` - 删除前一个字符
+    - `ctrl + w` - 删除前一个单词
+    - `ctrl + u` - 删除光标到行首的内容
+    - `ctrl + k` - 删除光标到行尾的内容 
